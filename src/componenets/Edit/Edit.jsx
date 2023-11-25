@@ -15,16 +15,14 @@ const Edit = () => {
   const recieveData = location.state.elem;
   console.log(recieveData, "Location")
 
-  const dataFunction = ()=>{
+ 
+
+  useEffect(() => {
     setName(recieveData.name)
     setEmail(recieveData.email)
     setMobile(recieveData.mobile)
     setAddress(recieveData.address)
-  }
-
-  useEffect(() => {
-    dataFunction()
-  }, [dataFunction])
+  }, [recieveData])
 
   const notify = () => {
     return toast.success('Updated Succesfully', {

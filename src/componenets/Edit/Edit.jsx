@@ -83,7 +83,7 @@ notify()
         <input type="email" onChange={handleEmail} value={email} placeholder='Email' />
         <input type="mobile" onChange={handleMobile} value={mobile} placeholder='Mobile' />
         <input type="text" onChange={handleAddress} value={address} placeholder='Address' />
-      <button className="view" onClick={() => { navigate('/display') }}>View Lists</button>
+      {/* <button className="view" onClick={() => { navigate('/display') }}>View Lists</button> */}
         <button type="submit" className='submit'>Update</button>
       </form>
       <ToastContainer />

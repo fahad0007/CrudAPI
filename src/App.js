@@ -3,7 +3,7 @@ import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Form from './componenets/Form/Form'
 import Display from './componenets/Display/Display'
-import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Edit from './componenets/Edit/Edit';
 const App = () => {
   return (

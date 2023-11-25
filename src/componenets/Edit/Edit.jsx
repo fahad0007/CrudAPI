@@ -12,17 +12,19 @@ const Edit = () => {
   const [mobile, setMobile] = useState('')
   const [address, setAddress] = useState('')
 
-  const recieveData = location.state.elem
+  const recieveData = location.state.elem;
   console.log(recieveData, "Location")
 
-  useEffect(() => {
+  const dataFunction = ()=>{
     setName(recieveData.name)
     setEmail(recieveData.email)
     setMobile(recieveData.mobile)
     setAddress(recieveData.address)
+  }
 
-
-  }, [])
+  useEffect(() => {
+    dataFunction()
+  }, [dataFunction])
 
   const notify = () => {
     return toast.success('Updated Succesfully', {
@@ -69,21 +71,21 @@ const Edit = () => {
       mobile,
       address
     })
-    setTimeout(function () {
-      {navigate('/display')}
-  }, 1500)
-      // .then(() => {navigate('/display') })
+  //   setTimeout(function () {
+  //     {navigate ('/display')}
+  // }, 1500)
+      .then(() => {navigate('/display') })
 
 notify()
   }
   return (
     <div className='container'>
-      <button className="view" onClick={() => { navigate('/display') }}>View Lists</button>
       <form onSubmit={handleSubmit} className='form'>
         <input type="text" onChange={handleName} value={name} placeholder='Name' />
         <input type="email" onChange={handleEmail} value={email} placeholder='Email' />
         <input type="mobile" onChange={handleMobile} value={mobile} placeholder='Mobile' />
         <input type="text" onChange={handleAddress} value={address} placeholder='Address' />
+      <button className="view" onClick={() => { navigate('/display') }}>View Lists</button>
         <button type="submit" className='submit'>Update</button>
       </form>
       <ToastContainer />

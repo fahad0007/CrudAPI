@@ -1,0 +1,30 @@
+/* .actions{
+    display: flex;
+    justify-content: space-evenly;
+} */
+.edit-Icon{
+    color: green;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.delete-Icon{
+    color: red;
+    cursor: pointer;
+}
+.viewForm{
+    background: black;
+    opacity: 0.8;
+    text-align: right;
+}
+.viewForm button{
+    background-color: darkgreen;
+   
+    color: white;
+    width: 170px;
+}
+@media only screen and (max-width:680px)  {
+    .edit-Icon{
+       
+        margin-right: 0px;
+    }
+}

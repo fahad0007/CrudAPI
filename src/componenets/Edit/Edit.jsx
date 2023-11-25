@@ -52,12 +52,6 @@ const Edit = () => {
     setAddress(e.target.value)
   }
 
-  //  const reset = ()=>{
-  //   setName('')
-  //   setEmail('')
-  //   setMobile('')
-  //   setAddress('')
-  //  }
 
 
 
@@ -69,9 +63,7 @@ const Edit = () => {
       mobile,
       address
     })
-  //   setTimeout(function () {
-  //     {navigate ('/display')}
-  // }, 1500)
+
       .then(() => {navigate('/display') })
 
 notify()
